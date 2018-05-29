@@ -21,7 +21,9 @@ return array(
      *
      * @type string
      */
-    'title' => config('app.name'),
+    'title' => env('APP_NAME', 'Laravel'),
+
+
 
     /*
      * The path to your model config directory
