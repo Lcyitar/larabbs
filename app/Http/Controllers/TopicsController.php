@@ -20,7 +20,8 @@ class TopicsController extends Controller
 	public function index(Request $request, Topic $topic)
 	{
 		$topics = Topic::withOrder($request->order)->paginate(10);
-		return view('topics.index', compact('topics'));
+        $active_users = $user->getActiveUsers();
+		return view('topics.index', compact('topics', 'active_users'));
 	}
 
     public function show(Request $request, Topic $topic)
