@@ -7,14 +7,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
 use Spatie\Permission\Traits\HasRoles;
 use App\Models\traits\ActiveUserHelper;
+use App\Models\traits\LastActivedAtHelper;
 
 class User extends Authenticatable
 {
+    use LastActivedAtHelper;
     use ActiveUserHelper;
     use Notifiable {
         notify as protected laravelNotify;
     }
     use HasRoles;
+
 
 
     /**

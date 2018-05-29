@@ -7,8 +7,11 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use App\Models\Category;
+use App\Models\User;
+use App\Models\Link;
 use Auth;
 use App\Handlers\ImageUploadHandler;
+
 
 class TopicsController extends Controller
 {
