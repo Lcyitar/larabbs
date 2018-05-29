@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
+use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
     use Notifiable {
         notify as protected laravelNotify;
     }
+    use HasRoles;
 
     /**
      * The attributes that are mass assignable.
@@ -55,6 +57,7 @@ class User extends Authenticatable
         $this->increment('notification_count');
         $this->laravelNotify($instance);
     }
+
 
     public function markAsRead()
     {
