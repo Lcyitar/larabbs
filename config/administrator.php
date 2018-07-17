@@ -75,6 +75,10 @@ return array(
             'settings.site',
             'links'
         ],
+        '其他管理' => [
+            'settings.site',
+            'links'
+        ],
     ],
 
     /*
