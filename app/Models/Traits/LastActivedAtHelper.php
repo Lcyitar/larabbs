@@ -11,6 +11,7 @@ trait LastActivedAtHelper
     protected $hash_prefix = 'larabbs_last_actived_at_';
     protected $field_prefix = 'user_';
 
+
     public function recordLastActivedAt()
     {
         // 获取今天的日期
