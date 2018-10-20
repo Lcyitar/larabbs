@@ -14,6 +14,9 @@
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     @yield('styles')
+
+    <!-- 自动将http的不安全请求升级为https   -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 </head>
 
 <body>
