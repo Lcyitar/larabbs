@@ -26,7 +26,8 @@
         "spatie/laravel-permission": "~2.7",
         "summerblue/administrator": "~1.1",
         "tymon/jwt-auth": "1.0.0-rc.2",
-        "viacreative/sudo-su": "~1.1"
+        "viacreative/sudo-su": "~1.1",
+        "fzaninotto/faker": "~1.4",
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.1",
