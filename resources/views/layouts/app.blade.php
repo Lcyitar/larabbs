@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- 自动将http的不安全请求升级为https   -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title', 'LaraBBS') -  {{ setting('site_name', 'Laravel 进阶教程') }}</title>
@@ -15,8 +18,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/app.css') }}">
     @yield('styles')
 
-    <!-- 自动将http的不安全请求升级为https   -->
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
 </head>
 
 <body>
