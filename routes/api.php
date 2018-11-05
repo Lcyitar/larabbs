@@ -66,8 +66,13 @@ $api->version('v1', [
             $api->post('images', 'ImagesController@store')
                 ->name('api.images.store');
 
+            //
             $api->patch('user', 'UsersController@update')
                 ->name('api.user.update');
+
+            //发布话题
+            $api->post('topics', 'TopicsController@store')
+                ->name('api.topics.store');
 
         });
     });
