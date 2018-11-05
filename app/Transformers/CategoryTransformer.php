@@ -15,4 +15,5 @@ class CategoryTransformer extends TransformerAbstract
             'description' => $category->description,
         ];
     }
+
 }
