@@ -53,6 +53,10 @@ $api->version('v1', [
         $api->delete('authorizations/current', 'AuthorizationsController@destroy')
             ->name('api.authorizations.destroy');
 
+        //帖子分类信息
+        $api->get('categories', 'CategoriesController@index')
+            ->name('api.categories.index');
+
          // 需要 token 验证的接口
         $api->group(['middleware' => 'api.auth'], function($api) {
             // 当前登录用户信息
