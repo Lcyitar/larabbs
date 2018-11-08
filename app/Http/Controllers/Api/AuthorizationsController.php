@@ -68,7 +68,7 @@ class AuthorizationsController extends Controller
         $username = $request->username;
 
         filter_var($username, FILTER_VALIDATE_EMAIL) ?
-            $credentials['email'] = $username :
+            $credentials['email'] = $username   :
             $credentials['phone'] = $username;
 
         $credentials['password'] = $request->password;
