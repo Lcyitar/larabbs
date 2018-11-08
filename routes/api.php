@@ -21,7 +21,7 @@ $api = app('Dingo\Api\Routing\Router');
 
 $api->version('v1', [
     'namespace' => 'App\Http\Controllers\Api',
-    'middleware' => ['serializer:array', 'bindings']
+    'middleware' => ['serializer:array', 'bindings'],
 ], function($api) {
      $api->group([
         'middleware' => 'api.throttle',
@@ -92,7 +92,9 @@ $api->version('v1', [
             //发布回复
             $api->post('topics/{topic}/replies', 'RepliesController@store')
                 ->name('api.topics.replies.store');
-
+            //删除回复
+            $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
+                ->name('api.topics.replies.destroy');
         });
     });
 

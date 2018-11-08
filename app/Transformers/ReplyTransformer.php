@@ -7,7 +7,7 @@ use League\Fractal\TransformerAbstract;
 
 class ReplyTransformer extends TransformerAbstract
 {
-    public  function  transform(Reply $reply)
+    public function  transform(Reply $reply)
     {
         return [
             'id' => $reply->id,
