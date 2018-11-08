@@ -66,10 +66,20 @@ $api->version('v1', [
         //话题详情
         $api->get('topics/{topic}', 'TopicsController@show')
             ->name('api.topics.show');
+         // 话题回复列表
+         $api->get('topics/{topic}/replies', 'RepliesController@index')
+             ->name('api.topics.replies.index');
+         //某个用户的回复列表
+         $api->get('users/{user}/replies', 'RepliesController@userIndex')
+             ->name('api.users.replies.index');
 
          //资源推荐
          $api->get('links', 'LinksController@index')
              ->name('api.links.index');
+
+         // 活跃用户
+         $api->get('actived/users', 'UsersController@activedIndex')
+             ->name('api.actived.users.index');
 
          // 需要 token 验证的接口
         $api->group(['middleware' => 'api.auth'], function($api) {
@@ -99,12 +109,7 @@ $api->version('v1', [
             //删除回复
             $api->delete('topics/{topic}/replies/{reply}', 'RepliesController@destroy')
                 ->name('api.topics.replies.destroy');
-            // 话题回复列表
-            $api->get('topics/{topic}/replies', 'RepliesController@index')
-                ->name('api.topics.replies.index');
-            //某个用户的回复列表
-            $api->get('users/{user}/replies', 'RepliesController@userIndex')
-                ->name('api.users.replies.index');
+
 
             // 通知列表
             $api->get('user/notifications', 'NotificationsController@index')
