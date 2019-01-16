@@ -5,24 +5,24 @@ return [
     /*
      * Laravel-admin name.
      */
-    'name' => 'Laravel-admin',
+    'name' => 'larabbs',
 
     /*
      * Logo in admin panel header.
      */
-    'logo' => '<b>Laravel</b> admin',
+    'logo' => '<b>larabbs</b> admin',
 
     /*
      * Mini-logo in admin panel header.
      */
-    'logo-mini' => '<b>La</b>',
+    'logo-mini' => '<b>Lb</b>',
 
     /*
      * Route configuration.
      */
     'route' => [
 
-        'prefix' => 'admin',
+        'prefix' => 'laravel-admin/admin',
 
         'namespace' => 'App\\Admin\\Controllers',
 
@@ -37,7 +37,7 @@ return [
     /*
      * Laravel-admin html title.
      */
-    'title' => 'Admin',
+    'title' => 'larabbs 管理后台',
 
     /*
      * Use `https`.
