@@ -85,6 +85,8 @@ class UsersController extends Controller
         $grid->created_at('注册时间');
         $grid->last_actived_at('最后活跃时间');
 
+        $grid->model()->orderBy('id', 'desc');
+
         return $grid;
     }
 
