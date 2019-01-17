@@ -1,4 +1,4 @@
-<?php
+w<?php
 
 return [
     'online'                => 'en línea',

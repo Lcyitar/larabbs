@@ -34,6 +34,7 @@ return [
     'show'         => '显示',
     'entries'      => '条',
     'captcha'      => '验证码',
+    'search'       => '搜索',
 
     'action'            => '操作',
     'title'             => '标题',
@@ -52,6 +53,8 @@ return [
     'save_succeeded'    => '保存成功 !',
     'refresh_succeeded' => '刷新成功 !',
     'login_successful'  => '登录成功 !',
+    'continue_creating' => '继续添加',
+    'continue_editing' => '继续修改',
 
     'choose'       => '选择',
     'choose_file'  => '选择文件',

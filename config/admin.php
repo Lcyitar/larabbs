@@ -159,6 +159,11 @@ return [
         'material-ui' => [
             // 如果要关掉这个扩展，设置为 false
             'enable' => true
+        ],
+
+        'login-captcha' => [
+             // set to false if you want to disable this extension
+            'enable' => true,
         ]
     ],
 ];
