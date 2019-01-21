@@ -22,7 +22,7 @@ return [
      */
     'route' => [
 
-        'prefix' => 'laravel-admin/admin',
+        'prefix' => 'laravel-admin',
 
         'namespace' => 'App\\Admin\\Controllers',
 
@@ -163,7 +163,7 @@ return [
 
         'login-captcha' => [
              // set to false if you want to disable this extension
-            'enable' => true,
+            'enable' => false,
         ]
     ],
 ];
