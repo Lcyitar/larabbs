@@ -23,7 +23,7 @@ class UsersController extends Controller
     public function index(Content $content)
     {
         return $content
-            ->header('用户列表')
+            ->header('用户列表 练习')
             ->body($this->grid());
     }
 
@@ -37,7 +37,7 @@ class UsersController extends Controller
     public function show($id, Content $content)
     {
         return $content
-            ->header('用户详情')
+            ->header('用户详情 练习')
             ->body($this->detail($id));
     }
 
